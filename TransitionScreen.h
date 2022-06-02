@@ -7,7 +7,7 @@
 class TransitionScreen
 {
 private:
-    float increment_line = .03f,
+    float increment_line = .12f,
           increment_line_plus = .2f,
           initialIncrementStep = 0.1f,
           minWindow = 0.0f,
