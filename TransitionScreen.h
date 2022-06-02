@@ -54,7 +54,7 @@ public:
 
     void close()
     {
-        if (currentHeightWindowLeft < maxHeightWindow && currentHeightWindowRight > minWindow)
+        if (validChangeWindowOnClose())
         {
             changeWindows();
         }
@@ -64,9 +64,13 @@ public:
         }
     }
 
+    bool validChangeWindowOnClose(){
+        return currentHeightWindowLeft < maxHeightWindow && currentHeightWindowRight > minWindow;
+    }
+
     void open()
     {
-        if (currentHeightWindowLeft > minWindow && currentHeightWindowRight < maxHeightWindow)
+        if (validChangeWindowOnOpen())
         {
             changeWindows();
         }
@@ -74,6 +78,10 @@ public:
         {
             toggleReinitialized();
         }
+    }
+
+    bool validChangeWindowOnOpen(){
+        return currentHeightWindowLeft > minWindow && currentHeightWindowRight < maxHeightWindow;
     }
 
     void changeWindows()
