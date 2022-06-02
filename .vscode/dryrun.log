@@ -1,6 +1,7 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/Conauti/Downloads/Wilmer - Docs/bewaffnet'
 make game
+ 
 make[1]: Entering directory `/Users/Conauti/Downloads/Wilmer - Docs/bewaffnet'
 make[1]: Leaving directory `/Users/Conauti/Downloads/Wilmer - Docs/bewaffnet'
 make: Leaving directory `/Users/Conauti/Downloads/Wilmer - Docs/bewaffnet'

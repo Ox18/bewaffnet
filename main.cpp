@@ -15,6 +15,8 @@ int main()
     Texture2D mainScreenTexture2 = LoadTexture("res/img/screens/intro-b.png");
 
     int framesCounter = 0;
+    int sleepTimeToChange = 60;
+    bool changeScreen = false;
     int location = 0;
 
     SetTargetFPS(60);
@@ -26,37 +28,41 @@ int main()
         {
         case 0:
             DrawTexture(mainScreenTexture, 0, 0, WHITE);
-            if (transitionScreen.isOpened())
+            changeScreen = true;
+            if (framesCounter > 60)
             {
-                if (transitionScreen.validChangeWindowOnClose())
-                {
-                    transitionScreen.changeWindows();
-                }
-                else
-                {
-                    transitionScreen.toggleReinitialized();
-                }
-            }
-            if(framesCounter > 60){
                 location = 1;
                 framesCounter = 0;
             }
             break;
         case 1:
             DrawTexture(mainScreenTexture2, 0, 0, WHITE);
-            if(!transitionScreen.isOpened()){
-                if(transitionScreen.validChangeWindowOnOpen()){
-                    transitionScreen.changeWindows();
-                }else{
-                    transitionScreen.toggleReinitialized();
-                }
-            }
             break;
         }
+
+        if (changeScreen && transitionScreen.isOpened())
+        {
+
+            transitionScreen.close();
+        }
+        else
+        {
+            changeScreen = false;
+        }
+        if (changeScreen && !transitionScreen.isOpened())
+        {
+
+            transitionScreen.open();
+        }
+        else
+        {
+            changeScreen = false;
+        }
         transitionScreen.drawWindows();
-        framesCounter++;
-        EndDrawing();
     }
+
+    framesCounter++;
+    EndDrawing();
 
     CloseWindow();
 

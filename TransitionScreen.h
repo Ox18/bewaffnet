@@ -38,20 +38,6 @@ public:
         return isOpen == true;
     }
 
-    void execute()
-    {
-        drawWindows();
-
-        if (isOpened())
-        {
-            close();
-        }
-        else
-        {
-            open();
-        }
-    }
-
     void close()
     {
         if (validChangeWindowOnClose())
@@ -62,10 +48,6 @@ public:
         {
             toggleReinitialized();
         }
-    }
-
-    bool validChangeWindowOnClose(){
-        return currentHeightWindowLeft < maxHeightWindow && currentHeightWindowRight > minWindow;
     }
 
     void open()
@@ -80,7 +62,13 @@ public:
         }
     }
 
-    bool validChangeWindowOnOpen(){
+    bool validChangeWindowOnClose()
+    {
+        return currentHeightWindowLeft < maxHeightWindow && currentHeightWindowRight > minWindow;
+    }
+
+    bool validChangeWindowOnOpen()
+    {
         return currentHeightWindowLeft > minWindow && currentHeightWindowRight < maxHeightWindow;
     }
 
@@ -96,7 +84,8 @@ public:
         currentIncrementStep += currentIncrementStep * increment_line + increment_line_plus;
     }
 
-    void toggleReinitialized(){
+    void toggleReinitialized()
+    {
         currentHeightWindowLeft = isOpened() ? maxHeightWindow : minWindow;
         currentHeightWindowRight = isOpened() ? minWindow : maxHeightWindow;
         currentIncrementStep = initialIncrementStep;

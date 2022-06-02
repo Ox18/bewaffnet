@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  bewaffnet:
+    image: bewaffnet
+    build:
+      context: .
+      dockerfile: ./Dockerfile
