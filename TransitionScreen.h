@@ -60,10 +60,7 @@ public:
         }
         else
         {
-            currentHeightWindowLeft = maxHeightWindow;
-            currentHeightWindowRight = minWindow;
-            currentIncrementStep = initialIncrementStep;
-            isOpen = false;
+            toggleReinitialized();
         }
     }
 
@@ -75,10 +72,7 @@ public:
         }
         else
         {
-            currentHeightWindowLeft = minWindow;
-            currentHeightWindowRight = maxHeightWindow;
-            currentIncrementStep = initialIncrementStep;
-            isOpen = true;
+            toggleReinitialized();
         }
     }
 
@@ -94,6 +88,13 @@ public:
         currentIncrementStep += currentIncrementStep * increment_line + increment_line_plus;
     }
 
+    void toggleReinitialized(){
+        currentHeightWindowLeft = isOpened() ? maxHeightWindow : minWindow;
+        currentHeightWindowRight = isOpened() ? minWindow : maxHeightWindow;
+        currentIncrementStep = initialIncrementStep;
+        isOpen = !isOpen;
+    }
+
     void drawWindows()
     {
         drawWindowLeft();
@@ -102,25 +103,17 @@ public:
 
     void drawWindowLeft()
     {
-        drawWindow(
-            minWindow, minWindow,
-            minWindow, currentHeightWindowLeft,
-            maxWidthWindow, minWindow, windowColor);
+        drawWindow(minWindow, minWindow, minWindow, currentHeightWindowLeft, maxWidthWindow, minWindow, windowColor);
     }
 
     void drawWindowRight()
     {
-        drawWindow(
-            maxWidthWindow, currentHeightWindowRight,
-            minWindow, maxHeightWindow,
-            maxWidthWindow, maxHeightWindow, windowColor);
+        drawWindow(maxWidthWindow, currentHeightWindowRight, minWindow, maxHeightWindow, maxWidthWindow, maxHeightWindow, windowColor);
     }
 
     void drawWindow(float a_x, float a_y, float b_x, float b_y, float c_x, float c_y, Color colorWindow)
     {
-        DrawTriangle((Vector2){a_x, a_y},
-                     (Vector2){b_x, b_y},
-                     (Vector2){c_x, c_y}, colorWindow);
+        DrawTriangle((Vector2){a_x, a_y}, (Vector2){b_x, b_y}, (Vector2){c_x, c_y}, colorWindow);
     }
 };
 
