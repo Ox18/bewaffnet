@@ -56,9 +56,7 @@ public:
     {
         if (currentHeightWindowLeft < maxHeightWindow && currentHeightWindowRight > minWindow)
         {
-            currentHeightWindowLeft += currentIncrementStep;
-            currentHeightWindowRight -= currentIncrementStep;
-            currentIncrementStep += currentIncrementStep * increment_line + increment_line_plus;
+            changeWindows();
         }
         else
         {
@@ -73,9 +71,7 @@ public:
     {
         if (currentHeightWindowLeft > minWindow && currentHeightWindowRight < maxHeightWindow)
         {
-            currentHeightWindowLeft -= currentIncrementStep;
-            currentHeightWindowRight += currentIncrementStep;
-            currentIncrementStep += currentIncrementStep * increment_line + increment_line_plus;
+            changeWindows();
         }
         else
         {
@@ -84,6 +80,18 @@ public:
             currentIncrementStep = initialIncrementStep;
             isOpen = true;
         }
+    }
+
+    void changeWindows()
+    {
+        currentHeightWindowLeft = isOpened() ? currentHeightWindowLeft + currentIncrementStep : currentHeightWindowLeft - currentIncrementStep;
+        currentHeightWindowRight = isOpened() ? currentHeightWindowRight - currentIncrementStep : currentHeightWindowRight + currentIncrementStep;
+        incrementStepOnChange();
+    }
+
+    void incrementStepOnChange()
+    {
+        currentIncrementStep += currentIncrementStep * increment_line + increment_line_plus;
     }
 
     void drawWindows()
