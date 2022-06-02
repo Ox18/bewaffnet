@@ -103,6 +103,10 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+launch 
+main
+TransitionScreen
+
 # Windows shortcuts
 *.lnk
 
