@@ -2,13 +2,14 @@
 #include "rlgl.h"
 #include "TransitionScreen.h"
 
+const float screenWidth = 800.0f;
+const float screenHeight = 600.0f;
+
 int main()
 {
-    TransitionScreen transitionScreen;
+    TransitionScreen transitionScreen(screenWidth, screenHeight);
 
-    const int screenWidth = 800;
-    const int screenHeight = 600;
-    InitWindow(screenWidth, screenHeight, "Gunbound");
+    InitWindow(screenWidth, screenHeight, "Gunbound2");
     
     SetTargetFPS(60);
     while (!WindowShouldClose())

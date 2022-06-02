@@ -11,6 +11,7 @@
 			"blocks.h": "c",
 			"stdio.h": "c",
 			"*.m": "c",
+			"*.h": "c",
 			"limits": "cpp",
 			"array": "cpp",
 			"atomic": "cpp",
