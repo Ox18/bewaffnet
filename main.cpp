@@ -1,27 +1,21 @@
 #include "raylib.h"
+#include "rlgl.h"
+#include "TransitionScreen.h"
 
 int main()
 {
-    InitWindow(800, 600, "Gunbound");
+    TransitionScreen transitionScreen;
 
-    Vector2 ballPosition = { 400.0f,300.0f };
+    const int screenWidth = 800;
+    const int screenHeight = 600;
+    InitWindow(screenWidth, screenHeight, "Gunbound");
     
     SetTargetFPS(60);
-
     while (!WindowShouldClose())
     {
         BeginDrawing();
-        
-        // clears the screen
-        ClearBackground(BLACK);
-
-        // get the mouse position
-        Vector2 mousePosition = GetMousePosition();
-
-        ballPosition = mousePosition;
-
-        DrawCircleV(ballPosition, 20.0f, BLUE);
-
+        ClearBackground(RAYWHITE);
+        transitionScreen.execute();
         EndDrawing();
     }
 
