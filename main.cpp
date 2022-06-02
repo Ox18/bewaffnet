@@ -9,10 +9,11 @@ int main()
 {
     TransitionScreen transitionScreen(screenWidth, screenHeight);
 
-    InitWindow(screenWidth, screenHeight, "Gunbound2");
+    InitWindow(screenWidth, screenHeight, "Gunbound");
     // intro screen
     Texture2D mainScreenTexture = LoadTexture("res/img/screens/intro-a.png");
     Texture2D mainScreenTexture2 = LoadTexture("res/img/screens/intro-b.png");
+    Texture2D lobbyTexture = LoadTexture("res/img/screens/lobby.png");
 
     int framesCounter = 0;
     int location = 0;
@@ -37,17 +38,49 @@ int main()
                     transitionScreen.toggleReinitialized();
                 }
             }
-            if(framesCounter > 60){
+            if (framesCounter > 60)
+            {
                 location = 1;
                 framesCounter = 0;
             }
             break;
         case 1:
             DrawTexture(mainScreenTexture2, 0, 0, WHITE);
-            if(!transitionScreen.isOpened()){
-                if(transitionScreen.validChangeWindowOnOpen()){
+            if (!transitionScreen.isOpened())
+            {
+                if (transitionScreen.validChangeWindowOnOpen())
+                {
                     transitionScreen.changeWindows();
-                }else{
+                }
+                else
+                {
+                    transitionScreen.toggleReinitialized();
+                }
+            }
+            if (transitionScreen.isOpened())
+            {
+                if (transitionScreen.validChangeWindowOnClose())
+                {
+                    transitionScreen.changeWindows();
+                }
+                else
+                {
+                    transitionScreen.toggleReinitialized();
+                    location = 2;
+                }
+            }
+            break;
+        case 2:
+            DrawTexture(lobbyTexture, 0, 0, WHITE);
+            //
+            if (!transitionScreen.isOpened())
+            {
+                if (transitionScreen.validChangeWindowOnOpen())
+                {
+                    transitionScreen.changeWindows();
+                }
+                else
+                {
                     transitionScreen.toggleReinitialized();
                 }
             }
