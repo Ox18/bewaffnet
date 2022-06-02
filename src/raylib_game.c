@@ -49,7 +49,7 @@ int main(void)
             if(open_left < max_open_left && open_right > max_open_right){
                 open_left += line_per_change;
                 open_right -= line_per_change;
-                line_per_change += line_per_change * 0.03f + .2f;
+                line_per_change += line_per_change * .12f + .2f;
             }else{
                 open_left = max_open_left;
                 open_right = max_open_right;
@@ -64,7 +64,7 @@ int main(void)
                 if(open_left > max_close_left && open_right < max_close_right){
                     open_left -= line_per_change;
                     open_right += line_per_change;
-                    line_per_change += line_per_change * 0.03f + .2f;
+                    line_per_change += line_per_change * .12f + .2f;
                 }else{
                     open_left = max_close_left;
                     open_right = max_close_right;
