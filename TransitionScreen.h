@@ -7,7 +7,7 @@
 class TransitionScreen
 {
 private:
-    float increment_line = .09f,
+    float increment_line = .03f,
           increment_line_plus = .2f,
           initialIncrementStep = 0.1f,
           minWindow = 0.0f,
@@ -42,19 +42,47 @@ public:
     {
         drawWindows();
 
-        if(isOpened()){
-            if(currentHeightWindowLeft < maxHeightWindow && currentHeightWindowRight > minWindow){
-                currentHeightWindowLeft += currentIncrementStep;
-                currentHeightWindowRight -= currentIncrementStep;
-                currentIncrementStep += currentIncrementStep * increment_line + increment_line_plus;
-            }else{
-                currentHeightWindowLeft = maxHeightWindow;
-                currentHeightWindowRight = minWindow;
-                currentIncrementStep = initialIncrementStep;
-                isOpen = false;
-            }
-        }else{
+        if (isOpened())
+        {
+            close();
+        }
+        else
+        {
+            open();
+        }
+    }
 
+    void close()
+    {
+        if (currentHeightWindowLeft < maxHeightWindow && currentHeightWindowRight > minWindow)
+        {
+            currentHeightWindowLeft += currentIncrementStep;
+            currentHeightWindowRight -= currentIncrementStep;
+            currentIncrementStep += currentIncrementStep * increment_line + increment_line_plus;
+        }
+        else
+        {
+            currentHeightWindowLeft = maxHeightWindow;
+            currentHeightWindowRight = minWindow;
+            currentIncrementStep = initialIncrementStep;
+            isOpen = false;
+        }
+    }
+
+    void open()
+    {
+        if (currentHeightWindowLeft > minWindow && currentHeightWindowRight < maxHeightWindow)
+        {
+            currentHeightWindowLeft -= currentIncrementStep;
+            currentHeightWindowRight += currentIncrementStep;
+            currentIncrementStep += currentIncrementStep * increment_line + increment_line_plus;
+        }
+        else
+        {
+            currentHeightWindowLeft = minWindow;
+            currentHeightWindowRight = maxHeightWindow;
+            currentIncrementStep = initialIncrementStep;
+            isOpen = true;
         }
     }
 
