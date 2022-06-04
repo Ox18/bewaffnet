@@ -16,11 +16,8 @@ make game
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make[1]: *** No rule to make target `main.c', needed by `game'.  Stop.
 
-
-# Make data base, printed on Thu Jun  2 16:25:42 2022
+# Make data base, printed on Fri Jun  3 18:10:57 2022
 
 # Variables
 
@@ -69,7 +66,7 @@ BUILD_MODE = RELEASE
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/tl/xhqvjv7x50q02t84md9_clx80000gn/T/vscode-ipc-fbd3428b-e953-4cd1-b91f-fd4ae4486eb1.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/tl/xhqvjv7x50q02t84md9_clx80000gn/T/vscode-ipc-98bf7b22-f0ee-417e-bde4-6cb16e1ea6fb.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -80,6 +77,8 @@ UNAMEOS = $(shell uname)
 RAYLIB_PATH = ..\..
 # makefile (from `Makefile', line 29)
 RAYLIB_API_VERSION = 300
+# environment
+LaunchInstanceID = 73B1267D-4F1F-4791-9AEF-C0AC0B8EB144
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -95,7 +94,7 @@ ANDROID_HOME = /Users/Conauti/Library/Android/sdk
 # makefile (from `Makefile', line 61)
 USE_EXTERNAL_GLFW = FALSE
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.HxhQtYAkqT/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.nJadTxjRP4/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -194,6 +193,8 @@ PROJECT_NAME = game
 RAYLIB_INSTALL_PATH = $(DESTDIR)/lib
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a7
 # automatic
 ^F = $(notdir $^)
 # default
@@ -207,9 +208,9 @@ MAKELEVEL := 1
 # environment
 LANG = C
 # environment
-VSCODE_PID = 512
+VSCODE_PID = 362
 # variable set hash-table stats:
-# Load=92/1024=9%, Rehash=0, Collisions=7/210=3%
+# Load=94/1024=9%, Rehash=0, Collisions=7/212=3%
 
 # Pattern-specific Variable Values
 
@@ -218,12 +219,12 @@ VSCODE_PID = 512
 # Directories
 
 # /opt/homebrew/include: could not be stat'd.
-# . (device 16777220, inode 12921605510): 20 files, no impossibilities.
+# . (device 16777220, inode 12921605510): 24 files, no impossibilities.
 # ..\../src: could not be stat'd.
 # src: could not be stat'd.
 # /opt/homebrew/lib: could not be stat'd.
 
-# 20 files, no impossibilities in 5 directories.
+# 24 files, no impossibilities in 5 directories.
 
 # Implicit Rules
 
@@ -292,6 +293,10 @@ clean:
 
 game: main.c
 #  Command-line target.
+ 
+make[1]: *** No rule to make target `main.c', needed by `game'.  Stop.
+make: *** [all] Error 2
+
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -302,7 +307,6 @@ game: main.c
 	
 
 # files hash-table stats:
- 
 # Load=8/1024=1%, Rehash=0, Collisions=0/24=0%
 # VPATH Search Paths
 
@@ -315,10 +319,10 @@ game: main.c
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun  2 16:25:42 2022
+# Finished Make data base on Fri Jun  3 18:10:57 2022
 
 
-# Make data base, printed on Thu Jun  2 16:25:42 2022
+# Make data base, printed on Fri Jun  3 18:10:57 2022
 
 # Variables
 
@@ -354,9 +358,6 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 _ = /usr/bin/make
 # makefile (from `Makefile', line 203)
 CFLAGS = -Wall -std=c++14 -D_DEFAULT_SOURCE -Wno-missing-braces -s -O1
- 
-make: *** [all] Error 2
-
 # environment
 WALLABY_PRODUCTION = true
 # makefile (from `Makefile', line 1)
@@ -370,7 +371,7 @@ BUILD_MODE = RELEASE
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/tl/xhqvjv7x50q02t84md9_clx80000gn/T/vscode-ipc-fbd3428b-e953-4cd1-b91f-fd4ae4486eb1.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/tl/xhqvjv7x50q02t84md9_clx80000gn/T/vscode-ipc-98bf7b22-f0ee-417e-bde4-6cb16e1ea6fb.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -381,6 +382,8 @@ UNAMEOS = $(shell uname)
 RAYLIB_PATH = ..\..
 # makefile (from `Makefile', line 29)
 RAYLIB_API_VERSION = 300
+# environment
+LaunchInstanceID = 73B1267D-4F1F-4791-9AEF-C0AC0B8EB144
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -396,7 +399,7 @@ ANDROID_HOME = /Users/Conauti/Library/Android/sdk
 # makefile (from `Makefile', line 61)
 USE_EXTERNAL_GLFW = FALSE
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.HxhQtYAkqT/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.nJadTxjRP4/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -495,6 +498,8 @@ PROJECT_NAME = game
 RAYLIB_INSTALL_PATH = $(DESTDIR)/lib
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a7
 # automatic
 ^F = $(notdir $^)
 # default
@@ -508,9 +513,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 512
+VSCODE_PID = 362
 # variable set hash-table stats:
-# Load=92/1024=9%, Rehash=0, Collisions=7/212=3%
+# Load=94/1024=9%, Rehash=0, Collisions=7/214=3%
 
 # Pattern-specific Variable Values
 
@@ -519,12 +524,12 @@ VSCODE_PID = 512
 # Directories
 
 # /opt/homebrew/include: could not be stat'd.
-# . (device 16777220, inode 12921605510): 20 files, no impossibilities.
+# . (device 16777220, inode 12921605510): 24 files, no impossibilities.
 # ..\../src: could not be stat'd.
 # src: could not be stat'd.
 # /opt/homebrew/lib: could not be stat'd.
 
-# 20 files, no impossibilities in 5 directories.
+# 24 files, no impossibilities in 5 directories.
 
 # Implicit Rules
 
@@ -581,6 +586,7 @@ main.c:
 # Not a target:
 .SUFFIXES:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -631,6 +637,6 @@ game: main.c
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun  2 16:25:42 2022
+# Finished Make data base on Fri Jun  3 18:10:57 2022
 
  
