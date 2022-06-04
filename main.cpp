@@ -1,18 +1,18 @@
 #include "raylib.h"
 #include "rlgl.h"
-#include "src/App.h"
+#include "Gunbound.h"
 
 int main()
 {
-    App app(*new App());
-    InitWindow(app.SCENE_WINDOW_WIDTH, app.SCENE_WINDOW_HEIGHT, app.SCENE_WINDOW_TITLE);
+    Gunbound gunbound(*new Gunbound());
+    InitWindow(gunbound.SCENE_WINDOW_WIDTH, gunbound.SCENE_WINDOW_HEIGHT, gunbound.SCENE_WINDOW_TITLE);
 
-    SetTargetFPS(60);
+    SetTargetFPS(gunbound.SCENE_FPS);
     while (!WindowShouldClose())
     {
         BeginDrawing();
         ClearBackground(RAYWHITE);
-        app.run();
+        gunbound.Draw();
         EndDrawing();
     }
 
