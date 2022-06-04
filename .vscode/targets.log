@@ -6,7 +6,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 make game
  
 # GNU Make 3.81
@@ -17,7 +16,7 @@ make game
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Fri Jun  3 18:10:57 2022
+# Make data base, printed on Sat Jun  4 16:31:40 2022
 
 # Variables
 
@@ -44,7 +43,7 @@ RAYLIB_VERSION = 3.0.0
 # makefile (from `Makefile', line 339)
 LDLIBS = -lraylib -framework OpenGL -framework OpenAL -framework Cocoa -framework IOKit
 # makefile
-CURDIR := /Users/Conauti/Downloads/Wilmer - Docs/bewaffnet
+CURDIR := /Volumes/Wilmer External Mac/projects/bewaffnet
 # makefile
 SHELL = /bin/sh
 # environment
@@ -66,7 +65,7 @@ BUILD_MODE = RELEASE
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/tl/xhqvjv7x50q02t84md9_clx80000gn/T/vscode-ipc-98bf7b22-f0ee-417e-bde4-6cb16e1ea6fb.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/tl/xhqvjv7x50q02t84md9_clx80000gn/T/vscode-ipc-cfa3d8ed-6732-416b-bffc-1a6364746440.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -104,7 +103,7 @@ OBJS = main.c
 # makefile (from `Makefile', line 92)
 PLATFORM_OS = OSX
 # environment
-PWD = /Users/Conauti/Downloads/Wilmer - Docs/bewaffnet
+PWD = /Volumes/Wilmer External Mac/projects/bewaffnet
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
@@ -118,7 +117,7 @@ VSCODE_CODE_CACHE_PATH = /Users/Conauti/Library/Application Support/Code/CachedD
 # environment
 LOGNAME = Conauti
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # makefile (from `Makefile', line 382)
 MAKEFILE_PARAMS = $(PROJECT_NAME)
 # environment
@@ -219,12 +218,12 @@ VSCODE_PID = 362
 # Directories
 
 # /opt/homebrew/include: could not be stat'd.
-# . (device 16777220, inode 12921605510): 24 files, no impossibilities.
+# . (device 16777232, inode 2494372): 26 files, no impossibilities.
 # ..\../src: could not be stat'd.
 # src: could not be stat'd.
 # /opt/homebrew/lib: could not be stat'd.
 
-# 24 files, no impossibilities in 5 directories.
+# 26 files, no impossibilities in 5 directories.
 
 # Implicit Rules
 
@@ -268,7 +267,7 @@ main.c:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-01 22:00:05
+#  Last modified 2022-06-04 16:26:54
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -294,9 +293,6 @@ clean:
 game: main.c
 #  Command-line target.
  
-make[1]: *** No rule to make target `main.c', needed by `game'.  Stop.
-make: *** [all] Error 2
-
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -319,10 +315,10 @@ make: *** [all] Error 2
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Jun  3 18:10:57 2022
+# Finished Make data base on Sat Jun  4 16:31:40 2022
 
 
-# Make data base, printed on Fri Jun  3 18:10:57 2022
+# Make data base, printed on Sat Jun  4 16:31:40 2022
 
 # Variables
 
@@ -349,7 +345,7 @@ RAYLIB_VERSION = 3.0.0
 # makefile (from `Makefile', line 339)
 LDLIBS = -lraylib -framework OpenGL -framework OpenAL -framework Cocoa -framework IOKit
 # makefile
-CURDIR := /Users/Conauti/Downloads/Wilmer - Docs/bewaffnet
+CURDIR := /Volumes/Wilmer External Mac/projects/bewaffnet
 # makefile
 SHELL = /bin/sh
 # environment
@@ -371,7 +367,7 @@ BUILD_MODE = RELEASE
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/tl/xhqvjv7x50q02t84md9_clx80000gn/T/vscode-ipc-98bf7b22-f0ee-417e-bde4-6cb16e1ea6fb.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/tl/xhqvjv7x50q02t84md9_clx80000gn/T/vscode-ipc-cfa3d8ed-6732-416b-bffc-1a6364746440.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -409,7 +405,7 @@ OBJS = main.c
 # makefile (from `Makefile', line 92)
 PLATFORM_OS = OSX
 # environment
-PWD = /Users/Conauti/Downloads/Wilmer - Docs/bewaffnet
+PWD = /Volumes/Wilmer External Mac/projects/bewaffnet
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
@@ -423,7 +419,7 @@ VSCODE_CODE_CACHE_PATH = /Users/Conauti/Library/Application Support/Code/CachedD
 # environment
 LOGNAME = Conauti
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # makefile (from `Makefile', line 382)
 MAKEFILE_PARAMS = $(PROJECT_NAME)
 # environment
@@ -524,12 +520,12 @@ VSCODE_PID = 362
 # Directories
 
 # /opt/homebrew/include: could not be stat'd.
-# . (device 16777220, inode 12921605510): 24 files, no impossibilities.
+# . (device 16777232, inode 2494372): 26 files, no impossibilities.
 # ..\../src: could not be stat'd.
 # src: could not be stat'd.
 # /opt/homebrew/lib: could not be stat'd.
 
-# 24 files, no impossibilities in 5 directories.
+# 26 files, no impossibilities in 5 directories.
 
 # Implicit Rules
 
@@ -587,13 +583,16 @@ main.c:
 .SUFFIXES:
 #  Implicit rule search has not been done.
  
+make[1]: *** No rule to make target `main.c', needed by `game'.  Stop.
+make: *** [all] Error 2
+
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-01 22:00:05
+#  Last modified 2022-06-04 16:26:54
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -637,6 +636,6 @@ game: main.c
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Jun  3 18:10:57 2022
+# Finished Make data base on Sat Jun  4 16:31:41 2022
 
  

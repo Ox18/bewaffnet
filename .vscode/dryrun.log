@@ -1,10 +1,9 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/Conauti/Downloads/Wilmer - Docs/bewaffnet'
+make: Entering directory `/Volumes/Wilmer External Mac/projects/bewaffnet'
 make game
- 
-make[1]: Entering directory `/Users/Conauti/Downloads/Wilmer - Docs/bewaffnet'
-make[1]: Leaving directory `/Users/Conauti/Downloads/Wilmer - Docs/bewaffnet'
-make: Leaving directory `/Users/Conauti/Downloads/Wilmer - Docs/bewaffnet'
+make[1]: Entering directory `/Volumes/Wilmer External Mac/projects/bewaffnet'
+make[1]: Leaving directory `/Volumes/Wilmer External Mac/projects/bewaffnet'
+make: Leaving directory `/Volumes/Wilmer External Mac/projects/bewaffnet'
  
 make[1]: *** No rule to make target `main.c', needed by `game'.
 make: *** [all] Error 2

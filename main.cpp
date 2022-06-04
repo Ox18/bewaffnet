@@ -1,11 +1,11 @@
 #include "raylib.h"
 #include "rlgl.h"
-#include "App.h"
+#include "src/App.h"
 
 int main()
 {
-    Application app;
-    InitWindow(app.SCENE_WIDTH, app.SCENE_HEIGHT, "Gunbound");
+    App app(*new App());
+    InitWindow(app.SCENE_WINDOW_WIDTH, app.SCENE_WINDOW_HEIGHT, app.SCENE_WINDOW_TITLE);
 
     SetTargetFPS(60);
     while (!WindowShouldClose())
