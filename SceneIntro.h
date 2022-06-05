@@ -1,7 +1,9 @@
 #ifndef SCENE_INTRO_H_
 #define SCENE_INTRO_H_
 
-class SceneIntro
+#include "Scene.h"
+
+class SceneIntro : public Scene
 {
 public:
     SceneIntro();
