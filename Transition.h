@@ -25,6 +25,7 @@ public:
         currentHeightWindowLeft,
         currentHeightWindowRight,
         currentIncrementStep;
+    bool reinitalized = false;
     Transition();
     ~Transition();
     void open();

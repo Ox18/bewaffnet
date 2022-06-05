@@ -6,8 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
-make game
  
+make game
 # GNU Make 3.81
 # Copyright (C) 2006  Free Software Foundation, Inc.
 # This is free software; see the source for copying conditions.
@@ -16,7 +16,7 @@ make game
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Sat Jun  4 16:31:40 2022
+# Make data base, printed on Sun Jun  5 00:15:52 2022
 
 # Variables
 
@@ -65,7 +65,7 @@ BUILD_MODE = RELEASE
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/tl/xhqvjv7x50q02t84md9_clx80000gn/T/vscode-ipc-cfa3d8ed-6732-416b-bffc-1a6364746440.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/tl/xhqvjv7x50q02t84md9_clx80000gn/T/vscode-ipc-24f46932-15b8-40ac-bdf1-13c2e1a51580.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -117,7 +117,7 @@ VSCODE_CODE_CACHE_PATH = /Users/Conauti/Library/Application Support/Code/CachedD
 # environment
 LOGNAME = Conauti
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # makefile (from `Makefile', line 382)
 MAKEFILE_PARAMS = $(PROJECT_NAME)
 # environment
@@ -218,12 +218,12 @@ VSCODE_PID = 362
 # Directories
 
 # /opt/homebrew/include: could not be stat'd.
-# . (device 16777232, inode 2494372): 26 files, no impossibilities.
+# . (device 16777232, inode 2494372): 28 files, no impossibilities.
 # ..\../src: could not be stat'd.
 # src: could not be stat'd.
 # /opt/homebrew/lib: could not be stat'd.
 
-# 26 files, no impossibilities in 5 directories.
+# 28 files, no impossibilities in 5 directories.
 
 # Implicit Rules
 
@@ -291,8 +291,11 @@ clean:
 	
 
 game: main.c
-#  Command-line target.
  
+make[1]: *** No rule to make target `main.c', needed by `game'.  Stop.
+make: *** [all] Error 2
+
+#  Command-line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -315,10 +318,10 @@ game: main.c
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Jun  4 16:31:40 2022
+# Finished Make data base on Sun Jun  5 00:15:52 2022
 
 
-# Make data base, printed on Sat Jun  4 16:31:40 2022
+# Make data base, printed on Sun Jun  5 00:15:52 2022
 
 # Variables
 
@@ -367,7 +370,7 @@ BUILD_MODE = RELEASE
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/tl/xhqvjv7x50q02t84md9_clx80000gn/T/vscode-ipc-cfa3d8ed-6732-416b-bffc-1a6364746440.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/tl/xhqvjv7x50q02t84md9_clx80000gn/T/vscode-ipc-24f46932-15b8-40ac-bdf1-13c2e1a51580.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -419,7 +422,7 @@ VSCODE_CODE_CACHE_PATH = /Users/Conauti/Library/Application Support/Code/CachedD
 # environment
 LOGNAME = Conauti
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # makefile (from `Makefile', line 382)
 MAKEFILE_PARAMS = $(PROJECT_NAME)
 # environment
@@ -520,12 +523,12 @@ VSCODE_PID = 362
 # Directories
 
 # /opt/homebrew/include: could not be stat'd.
-# . (device 16777232, inode 2494372): 26 files, no impossibilities.
+# . (device 16777232, inode 2494372): 28 files, no impossibilities.
 # ..\../src: could not be stat'd.
 # src: could not be stat'd.
 # /opt/homebrew/lib: could not be stat'd.
 
-# 26 files, no impossibilities in 5 directories.
+# 28 files, no impossibilities in 5 directories.
 
 # Implicit Rules
 
@@ -581,11 +584,8 @@ main.c:
 
 # Not a target:
 .SUFFIXES:
-#  Implicit rule search has not been done.
  
-make[1]: *** No rule to make target `main.c', needed by `game'.  Stop.
-make: *** [all] Error 2
-
+#  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -636,6 +636,6 @@ game: main.c
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Jun  4 16:31:41 2022
+# Finished Make data base on Sun Jun  5 00:15:52 2022
 
  

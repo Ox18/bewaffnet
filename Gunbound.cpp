@@ -24,5 +24,15 @@ void Gunbound::Init(){
 
 void Gunbound::Draw()
 {
-    sceneIntro.Draw();
+    switch (CURRENT_SCENE_ID)
+    {
+    case 0:
+        sceneIntro.Draw();
+        break;
+    }
+};
+
+void Gunbound::changeScene(int sceneId){
+    // Change scene
+    CURRENT_SCENE_ID = sceneId;
 };

@@ -26,6 +26,7 @@ void Transition::open()
         this->currentHeightWindowLeft -= this->currentIncrementStep;
         this->currentHeightWindowRight += this->currentIncrementStep;
         incrementStepOnChange();
+        reinitalized = false;
     }
     else
     {
@@ -33,6 +34,7 @@ void Transition::open()
         this->currentHeightWindowRight = 600.0f;
         this->isOpen = true;
         this->currentIncrementStep = this->initialIncrementStep;
+        reinitalized = true;
     }
 };
 
@@ -43,6 +45,7 @@ void Transition::close()
         currentHeightWindowLeft += currentIncrementStep;
         currentHeightWindowRight -= currentIncrementStep;
         incrementStepOnChange();
+        reinitalized = false;
     }
     else
     {
@@ -50,6 +53,7 @@ void Transition::close()
         currentHeightWindowRight = 0.0f;
         this->isOpen = false;
         this->currentIncrementStep = this->initialIncrementStep;
+        reinitalized = true;
     }
 };
 
