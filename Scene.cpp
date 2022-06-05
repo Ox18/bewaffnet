@@ -2,13 +2,22 @@
 
 Scene::Scene()
 {
-    STATUS_OPEN = "0";
-    STATUS_CLOSED = "1";
-    STATUS_OPENING = "2";
-    STATUS_CLOSING = "4";
-    current_status = "0";
+    STATUS_OPEN = "open";
+    STATUS_CLOSED = "closed";
+    STATUS_OPENING = "opening";
+    STATUS_CLOSING = "closing";
+    current_status = "closed";
+    transition = Transition();
 };
 
-Scene::~Scene()
+Scene::~Scene(){};
+
+void Scene::renderTransition(){
+    // render transition
+    transition.drawWindows();
+};
+
+void Scene::changeStatus(string new_status)
 {
-}
+    current_status = new_status;
+};

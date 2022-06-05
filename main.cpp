@@ -5,7 +5,7 @@
 int main()
 {
     Gunbound gunbound(*new Gunbound());
-    InitWindow(gunbound.SCENE_WINDOW_WIDTH, gunbound.SCENE_WINDOW_HEIGHT, gunbound.SCENE_WINDOW_TITLE);
+    InitWindow(gunbound.SCENE_WINDOW_WIDTH, gunbound.SCENE_WINDOW_HEIGHT, "Gunbound");
 
     SetTargetFPS(gunbound.SCENE_FPS);
     while (!WindowShouldClose())
