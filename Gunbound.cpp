@@ -14,8 +14,6 @@ Gunbound::~Gunbound(){
 };
 
 void Gunbound::Update(){
-    // Update
-
 };
 
 void Gunbound::Init(){
@@ -24,12 +22,6 @@ void Gunbound::Init(){
 
 void Gunbound::Draw()
 {
-    switch (CURRENT_SCENE_ID)
-    {
-    case 0:
-        sceneIntro.Draw();
-        break;
-    }
 };
 
 void Gunbound::changeScene(int sceneId){
