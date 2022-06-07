@@ -3,6 +3,8 @@
 Gunbound::Gunbound()
 {
     SCENE_WINDOW_WIDTH = 800;
+    // TEST SCENE
+    // CHANGE THE SCENE WITH A DEFAULT VALUE
     SCENE_WINDOW_HEIGHT = 600;
     SCENE_WINDOW_TITLE = "Gunbound";
     SCENE_FPS = 60;
